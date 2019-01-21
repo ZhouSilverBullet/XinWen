@@ -1,7 +1,6 @@
 package com.zhousaito.news;
 
-import android.util.Log;
-
+import com.orhanobut.logger.Logger;
 import com.zhousaito.news.base.BaseMvpActivity;
 import com.zhousaito.news.presenter.MainPresenter;
 import com.zhousaito.news.presenter.contract.MainContract;
@@ -27,7 +26,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
 
     @Override
     public void showDataList(String value) {
-        Log.e(TAG, "showDataList: " + value);
+        Logger.i("showDataList: " + value);
     }
 
     @Override
