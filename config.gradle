@@ -11,38 +11,61 @@ ext {
     ]
 
     def dependVersion = [
-            androidx           : "1.0.0-beta01",
-            constraintlayout   : "1.1.2",
-            junit              : "4.12",
-            test_runner        : "1.1.0-alpha4",
-            test_espresso      : "3.1.0-alpha4",
-            gson               : "2.8.2",
-            retrofit           : "2.3.0",
-            okhttp             : "3.12.1",
-            logging_interceptor: "3.4.1",
-            dagger             : "2.8",
-            dagger_compiler    : "2.6",
-            logger             : "2.2.0",
-            butterknife        : "8.4.0",
-            blockcanary        : "1.2.1",
-            leakcanary         : "1.4-beta2"
+            androidx                     : "1.0.0-beta01",
+            constraintlayout             : "1.1.2",
+            material                     : "1.0.0+",
+            ahbottomnavigation           : "2.3.4",
+            SmartRefresh                 : "1.0.5.1",
+            BaseRecyclerViewAdapterHelper: "2.9.46",
+
+            junit                        : "4.12",
+            test_runner                  : "1.1.0-alpha4",
+            test_espresso                : "3.1.0-alpha4",
+
+            gson                         : "2.8.2",
+            retrofit                     : "2.3.0",
+            okhttp                       : "3.12.1",
+            logging_interceptor          : "3.4.1",
+
+            dagger                       : "2.8",
+            dagger_compiler              : "2.6",
+            logger                       : "2.2.0",
+            butterknife                  : "10.0.0",
+
+            blockcanary                  : "1.2.1",
+            leakcanary                   : "1.4-beta2"
     ]
 
+
     dependencies = [
-            "androidx.appcompat" : "androidx.appcompat:appcompat:${dependVersion.androidx}",
-            "constraintlayout"   : "androidx.constraintlayout:constraintlayout:${dependVersion.constraintlayout}",
-            "junit"              : "junit:junit:${dependVersion.junit}",
-            "test.runer"         : "androidx.test:runner:${dependVersion.test_runner}",
-            "test.espresso"      : "androidx.test.espresso:espresso-core:${dependVersion.test_espresso}",
-            "gson"               : "com.google.code.gson:gson:${dependVersion.gson}",
-            "retrofit"           : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
-            "converter-gson"     : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
-            "adapter-rxjava"     : "com.squareup.retrofit2:adapter-rxjava:${dependVersion.retrofit}",
-            "okhttp"             : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
-            "logging.interceptor": "com.squareup.okhttp3:logging-interceptor:${dependVersion.logging_interceptor}",
-            "logger"             : "com.orhanobut:logger:${dependVersion.logger}",
-            "dagger"             : "com.google.dagger:dagger:${dependVersion.dagger}",
-            "dagger-compiler"    : "com.google.dagger:dagger-compiler:${dependVersion.dagger_compiler}"
+            //ui
+            "androidx.appcompat"           : "androidx.appcompat:appcompat:${dependVersion.androidx}",
+            "material"                     : "com.google.android.material:material:${dependVersion.material}",
+            "constraintlayout"             : "androidx.constraintlayout:constraintlayout:${dependVersion.constraintlayout}",
+            "ahbottomnavigation"           : "com.aurelhubert:ahbottomnavigation:${dependVersion.ahbottomnavigation}",
+            "SmartRefreshLayout"           : "com.scwang.smartrefresh:SmartRefreshLayout:${dependVersion.SmartRefresh}",
+            "SmartRefreshHeader"           : "com.scwang.smartrefresh:SmartRefreshHeader:${dependVersion.SmartRefresh}",//没有使用特殊Header，可以不加这行
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependVersion.BaseRecyclerViewAdapterHelper}",
+
+            //test
+            "junit"                        : "junit:junit:${dependVersion.junit}",
+            "test.runer"                   : "androidx.test:runner:${dependVersion.test_runner}",
+            "test.espresso"                : "androidx.test.espresso:espresso-core:${dependVersion.test_espresso}",
+
+            //http
+            "gson"                         : "com.google.code.gson:gson:${dependVersion.gson}",
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "converter-gson"               : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+            "adapter-rxjava"               : "com.squareup.retrofit2:adapter-rxjava:${dependVersion.retrofit}",
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:${dependVersion.okhttp}",
+            "logging.interceptor"          : "com.squareup.okhttp3:logging-interceptor:${dependVersion.logging_interceptor}",
+            "logger"                       : "com.orhanobut:logger:${dependVersion.logger}",
+
+            //di
+            "dagger"                       : "com.google.dagger:dagger:${dependVersion.dagger}",
+            "dagger-compiler"              : "com.google.dagger:dagger-compiler:${dependVersion.dagger_compiler}",
+            "butterknife"                  : "com.jakewharton:butterknife:${dependVersion.butterknife}",
+            "butterknife-compiler"         : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}"
     ]
 
 

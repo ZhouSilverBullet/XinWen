@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -26,6 +27,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies["androidx.appcompat"]
     implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["ahbottomnavigation"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["SmartRefreshHeader"]
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+
     implementation rootProject.ext.dependencies["junit"]
     implementation rootProject.ext.dependencies["test.runer"]
     implementation rootProject.ext.dependencies["gson"]
@@ -36,6 +43,9 @@ dependencies {
     implementation rootProject.ext.dependencies["okhttp"]
     implementation rootProject.ext.dependencies["logging.interceptor"]
     implementation rootProject.ext.dependencies["logger"]
+
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 }

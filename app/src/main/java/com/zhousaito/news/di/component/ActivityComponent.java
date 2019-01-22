@@ -6,6 +6,7 @@ import android.app.Activity;
 import com.zhousaito.news.MainActivity;
 import com.zhousaito.news.di.module.ActivityModule;
 import com.zhousaito.news.di.qualifier.ActivityScope;
+import com.zhousaito.news.ui.activity.HomeActivity;
 
 import dagger.Component;
 
@@ -15,4 +16,6 @@ public interface ActivityComponent {
     Activity getActivity();
 
     void inject(MainActivity mainActivity);
+
+    void inject(HomeActivity homeActivity);
 }
