@@ -14,6 +14,7 @@ import com.zhousaito.news.R;
 import com.zhousaito.news.base.BaseMvpActivity;
 import com.zhousaito.news.presenter.HomePresenter;
 import com.zhousaito.news.presenter.contract.HomeContract;
+import com.zhousaito.news.ui.fragment.HomeFragment;
 import com.zhousaito.news.utils.ReflectUtils;
 
 import java.util.List;
@@ -43,6 +44,9 @@ public class HomeActivity extends BaseMvpActivity<HomePresenter> implements Home
     @Override
     protected void initView() {
         initAHNavigation();
+
+        HomeFragment homeFragment = new HomeFragment();
+        loadRootFragment(R.id.fl_home_container, homeFragment);
     }
 
     private void initAHNavigation() {

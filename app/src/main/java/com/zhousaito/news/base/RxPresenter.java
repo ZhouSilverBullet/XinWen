@@ -1,23 +1,24 @@
 package com.zhousaito.news.base;
 
-import rx.Subscription;
-import rx.subscriptions.CompositeSubscription;
+
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
 
     protected T mView;
-    protected CompositeSubscription mCompositeSubscription;
+    protected CompositeDisposable mCompositeDisposable;
 
-    protected void addSubscribe(Subscription subscription) {
-        if (mCompositeSubscription == null) {
-            mCompositeSubscription = new CompositeSubscription();
+    protected void addSubscribe(Disposable disposable) {
+        if (mCompositeDisposable == null) {
+            mCompositeDisposable = new CompositeDisposable();
         }
-        mCompositeSubscription.add(subscription);
+        mCompositeDisposable.add(disposable);
     }
 
     protected void unSubscribe() {
-        if (mCompositeSubscription != null) {
-            mCompositeSubscription.unsubscribe();
+        if (mCompositeDisposable != null) {
+            mCompositeDisposable.dispose();
         }
     }
 

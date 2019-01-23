@@ -17,7 +17,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitHelper {
@@ -25,13 +25,13 @@ public class RetrofitHelper {
     private static OkHttpClient okHttpClient;
     private static ApiService apiService;
 
-    public static ApiService getXXApi() {
+    public static ApiService getNewsApi() {
         initOkHttp();
         if (apiService == null) {
             apiService = new Retrofit.Builder()
                     .baseUrl(ApiService.BASE_URL)
                     .client(okHttpClient)
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
                     .create(ApiService.class);

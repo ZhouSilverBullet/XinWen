@@ -32,6 +32,11 @@ dependencies {
     implementation rootProject.ext.dependencies["SmartRefreshLayout"]
     implementation rootProject.ext.dependencies["SmartRefreshHeader"]
     implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+    implementation 'me.yokeyword:fragmentation-swipeback:1.3.6'
+    implementation 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
 
     implementation rootProject.ext.dependencies["junit"]
     implementation rootProject.ext.dependencies["test.runer"]
@@ -42,9 +47,11 @@ dependencies {
     implementation rootProject.ext.dependencies["adapter-rxjava"]
     implementation rootProject.ext.dependencies["okhttp"]
     implementation rootProject.ext.dependencies["logging.interceptor"]
+    implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["logger"]
 
     implementation rootProject.ext.dependencies["butterknife"]
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
