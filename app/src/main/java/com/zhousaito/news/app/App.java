@@ -6,12 +6,13 @@ import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.zhousaito.news.app.base.BaseApp;
 import com.zhousaito.news.di.component.AppComponent;
 import com.zhousaito.news.di.component.DaggerAppComponent;
 import com.zhousaito.news.di.module.AppModule;
 
 
-public class App extends Application {
+public class App extends BaseApp {
 
     private static App instance;
     private static AppComponent appComponent;

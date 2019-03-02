@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="white">#ffffff</color>
+    <color name="color_f85959">#f85959</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+
     <array name="tab_colors">
         <item>#D81B60</item>
         <item>#D81B60</item>
